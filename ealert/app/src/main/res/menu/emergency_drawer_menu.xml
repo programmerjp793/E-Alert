@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_fire"
+        android:icon="@drawable/nav_fire2"
+        android:title="Fire Emergency" />
+    <item
+        android:id="@+id/nav_medic"
+        android:icon="@drawable/nav_medic2"
+        android:title="Medical Emergency" />
+    <item
+        android:id="@+id/nav_accident"
+        android:icon="@drawable/nav_accident2"
+        android:title="Accident" />
+    <item
+        android:id="@+id/nav_personal"
+        android:icon="@drawable/nav_personal2"
+        android:title="Personal Threat" />
+    <item
+        android:id="@+id/nav_others"
+        android:icon="@drawable/nav_others2"
+        android:title="Others" />
+</menu>

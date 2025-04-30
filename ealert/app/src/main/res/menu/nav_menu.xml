@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/nav_home"
+        android:title="HOME" />
+
+    <item
+        android:id="@+id/nav_rep_his"
+        android:title="REPORT HISTORY" />
+
+    <item
+        android:id="@+id/nav_profile"
+        android:title="PROFILE" />
+
+    <item
+        android:id="@+id/nav_logout"
+        android:title="LOGOUT" />
+
+</menu>
