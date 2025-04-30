@@ -1,0 +1,222 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(Homepage.png) no-repeat center center fixed, #240b0b;
+    background-size: cover;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Container */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    padding: 15px 5%;
+    background: #720D2A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Logo E-Alert */
+.alt-logo {
+    width: 120px;
+    height: auto;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.navbar a {
+    position: relative;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 2px;
+    background: white;
+    border-radius: 5px;
+    transform: translateY(4px);
+    opacity: 0;
+    transition: .5s;
+}
+
+.navbar a:hover::after {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+/* HAMBURGERRRR Menu Button */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    z-index: 200;
+}
+
+/* Resposive Settings for Mobile */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 5%;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #720D2A;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 10px 0;
+        z-index: 150;
+    }
+
+    .navbar a {
+        width: auto;
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .navbar a::after {
+        left: 0;
+        width: 100%; /* underline span */
+        transform: translateY(10px);
+    }
+
+    .navbar a:hover::after {
+        width: 100%;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    
+}
+
+/* Background */
+.background {
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 15vh auto;
+    padding: 20px;
+    color: #fff;
+    background: #724747;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.input-box {
+    margin-bottom: 15px;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-box input,
+.input-box select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 19px;
+    color: #240b0b;
+    background-color: white;
+}
+
+.input-box input[type="file"] {
+    padding: 3px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+.alt-logo {
+    width: 120px;
+    height: auto;
+}
+.profile-picture {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.profile-picture input[type="file"] {
+    display: none;
+}
+.profile-picture label {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}

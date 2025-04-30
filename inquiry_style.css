@@ -1,0 +1,640 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* Global Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(Homepage.png) no-repeat center center fixed, #240b0b;
+    background-size: cover;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Container */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    padding: 15px 5%;
+    background: #720D2A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Logo E-Alert */
+.alt-logo {
+    width: 120px;
+    height: auto;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.navbar a {
+    position: relative;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 2px;
+    background: white;
+    border-radius: 5px;
+    transform: translateY(4px);
+    opacity: 0;
+    transition: .5s;
+}
+
+.navbar a:hover::after {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+/* HAMBURGERRRR Menu Button */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    z-index: 200;
+}
+
+/* Resposive Settings for Mobile */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 5%;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #720D2A;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 10px 0;
+        z-index: 150;
+    }
+
+    .navbar a {
+        width: auto;
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .navbar a::after {
+        left: 0;
+        width: 100%; /* underline span */
+        transform: translateY(10px);
+    }
+
+    .navbar a:hover::after {
+        width: 100%;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+}
+
+/* Background */
+.background {
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Section Styles */
+section {
+    color: #fff;
+    padding: 80px 0 0 0;
+    text-align: center;
+    width: 100%;
+    height: 100vh; /* Full height for each section */
+}
+
+section h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+section p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    font-style: italic;
+    padding-bottom: 60px;
+}
+
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    top: 10px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    overflow: hidden;
+    z-index: 10;
+}
+
+/* Carousel Slide */
+.carousel-slide {
+    display: flex;
+    width: 100%; /* This should be dynamically set */
+    transition: transform 0.5s ease-in-out;
+}
+
+
+
+.carousel-image {
+    flex: 0 0 100%; /* Ensures each image takes full width */
+    max-width: 100%;
+}
+
+
+/* Centered Text */
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.655);
+    text-align: center;
+    z-index: 20;
+}
+
+.carousel-text h2 {
+    font-size: 3vw;
+    margin: 0;
+}
+
+/* Nav Buttons */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 100;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+/* Carousel responsivity based on size*/
+@media (max-width: 768px) {
+    .carousel-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-text p {
+        font-size: 0.9rem;
+    }
+}
+
+.carousel-container2 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+#reports-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+#reports-carousel .carousel-slide2 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+/* Default - Large Screens (Show 3 Images) */
+#reports-carousel .report-slide {
+    flex: 0 0 33.33%; /* Each image takes up 33.33% of the container */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+#reports-carousel .report-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+/* Center the text properly */
+#reports-carousel .report-text {
+    position: absolute;
+    top: 20%; 
+    left: 50%;
+    transform: translate(-50%, -60%);
+    color: white;
+    text-align: left;
+    padding: 8px;
+    border-radius: 5px;
+    height: 50px;
+    width: 100%;
+    max-width: 80%;
+}
+
+.report-header {
+    position: relative;
+    padding: 10px;
+}
+
+.bxs-user-rectangle {
+    position: absolute;
+    top: 10%;
+    left: -20px;
+    transform: translateY(-50%); 
+}
+
+.username{
+    position: absolute;
+    font-weight: 700;
+    color: #ffcc00;
+    top: 10px;
+    left: 40px;
+    transform: translateY(-60%);
+}
+
+.location{
+    position: absolute;
+    top: 26px;
+    left: 40px;
+    transform: translateY(-60%);
+    font-weight: 600;
+    color: #000000;
+}
+
+
+.bxs-user-rectangle {
+    font-size: 35px;
+    color: #000000;
+    background-color: #EADDFF;
+    border-radius: 50%;
+    padding: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+}
+
+
+
+.subject-report {
+    position: relative;
+    top: 16px;
+    font-size: 15px;
+    color: black; /* Bright yellow */
+    width: 95%;
+    height: 24px;
+    margin: 0 auto; /* Centers the input field */
+}
+
+
+.details {
+    position: relative;
+    left: 20px;
+    font-size: 10px;
+    color: #fff;
+    border: white solid 1px;
+    padding: 4px;
+    border-radius: 5px;
+    margin-top: -20px;
+    line-height: 1.5;
+}
+
+.bxs-hot{
+    position: relative;
+    top: 20px;
+    left: -30px;
+    font-size: 40px; 
+    color: #000000;
+    background-color: #EADDFF;
+    border-radius: 10%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+
+/* Adjust for Tablets (2 items per row) */
+@media (max-width: 1024px) {
+    #reports-carousel .report-slide {
+        flex: 0 0 50%; /* 2 items per row */
+    }
+}
+
+/* Adjust for Mobile (1 item per row) */
+@media (max-width: 600px) {
+    #reports-carousel .report-slide {
+        flex: 0 0 100%; /* 1 item per row */
+    }
+
+    #reports-carousel .report-text {
+        font-size: 0.9rem;
+        max-width: 90%;
+    }
+}
+
+/* Reports Carousel Navigation Buttons */
+.reports-prev, .reports-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10;
+}
+
+/* Left & Right Button Positions */
+.reports-prev { left: 10px; }
+.reports-next { right: 10px; }
+
+.reports-prev:hover, .reports-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.reports-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.reports-action-btn {
+    width: 200px;
+    height: 40px;
+    background: #EA4F4F;
+    border: none;
+    outline: none;
+    border-radius:12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #3a0312;
+    font-weight: 1000;
+    font-style:italic;
+    box-shadow: 8px 8px 1px 0 rgba(0, 0, 0, 0.34);    
+}
+
+.reports-action-btn:hover {
+    background-color: #f1d015;
+    color:#3a0312;
+    font-weight: 1000;
+    transition: .2s ease-in, color .3s ease-out;
+    text-decoration: underline;
+}
+
+
+
+/* Scroll to Top Button */
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #00000064;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 100%;
+    cursor: pointer;
+    display: none;
+    z-index: 200;
+    transition: opacity 0.5s ease-in;
+}
+
+.scroll-to-top-btn:hover {
+    background-color: #ce8593;
+    transition: background-color 0.5s ease-out;
+}
+
+.btn{
+    width: 100%;
+    height: 40px;
+    background: #EA4F4F;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #3a0312;
+    font-weight: 1000;
+    font-style:italic;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.btn:hover{
+    background-color: #f1d015;
+    color:#3a0312;
+    font-weight: 1000;
+    transition: .2s ease-in, color .3s ease-out;
+    text-decoration: underline;
+}
+
+
+.emergency-services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(2, auto); /* 2 rows */
+    gap: 10px;
+    margin-top: 10px;
+    min-height: 100px; /* Adjust this value as needed */
+}
+
+
+.service-card {
+    display: flex;
+    align-items: center;
+    background: #2c1e1e;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.service-card:hover{
+    color: white;
+    background-color: #720D2A;
+    transition: .3s ease-in-out;
+}
+.service-card img {
+    width: 8vw;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.service-info h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.service-info p {
+    margin: 7px 0 0;
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+@media (max-width: 1024px) {
+    .emergency-services {
+        gap: 15px;
+        padding: 10px;
+        margin-top: -30px; /* Adjust spacing dynamically */
+    }
+}
+
+@media (max-width: 768px) {
+    .emergency-services {
+        grid-template-columns: 1fr; /* 1 column on smaller screens */
+        gap: 10px;
+        padding: 10px;
+        margin-top: -40px;
+    }
+}
+
+
+
+/* Social Media Section */
+.social-media {
+    background-color: #3A1E1E;
+    padding: 20px;
+    margin-top: 0px;
+    min-height: 100px; 
+}
+
+/* Background div to wrap the icons */
+.social-media-container {
+    background: #2b11114e; /* Dark brown background */
+    padding: 100px;
+    border-radius: 10px;
+    display: inline-block; /* Only as wide as the icons */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.social-media h2 {
+
+    font-size: 20px;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Adds spacing between the icons */
+}
+
+.social-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.social-label {
+    margin-top: 5px; /* Space between the icon and label */
+    font-size: 16px;
+    font-weight: 100;
+    color: #ffffff; /* Adjust color as needed */
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #D3D3D3; /* Light gray */
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.social-icon:hover {
+    background-color: #FFD700; /* Yellow on hover */
+}
+.location-search {
+    width: 95%;
+    height: 24px;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width */
+}
