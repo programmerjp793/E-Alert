@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ealert</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+    <string name="about_us"><string name="about_us">At E-Alert, we are committed to making a difference by providing a quick and reliable way for people to report emergencies and urgent situations.\n\nThrough our website and mobile application, individuals can easily seek help, ensuring that the right response reaches them as fast as possible.\n\nAs we work towards this mission, we hold on to the promise of Psalms 46:1:\n\"God is our refuge and strength, a very present help in trouble.\"\n\nAt E-Alert, we believe that every second counts—because help should always be within reach.</string>
+
+Sed tempus sem et mauris tempor, eget sollicitudin est pulvinar. </string>
+    <string name="ndrrmc">NDRRMC \n National Disaster Risk Reduction and Management Council
+                    serves as the President\'s adviser on disaster preparedness
+                    programs, disaster operations and rehabilitation efforts undertaken
+                    by the government and the private sector.</string>
+    <string name="bfp">BFP \n The BFP (Bureau of Fire Protection) is the agency responsible for fire prevention,
+                    suppression, and emergency response in the Philippines.</string>
+    <string name="prc">PRC \n The PRC (Philippine Red Cross) is a humanitarian organization that provides
+                    emergency response, disaster relief, health services, and blood donation
+                    programs in the Philippines.</string>
+    <string name="pnp">PNP \n The PNP (Philippine National Police) is the national police force of the Philippines.
+                    It is responsible for enforcing the law, maintaining peace and order, and ensuring
+                    public safety across the country.</string>
+    <string name="google_maps_key">AIzaSyDiCmJu27l3xt3SDIgwpfwwBeTfzn-iCAM</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
