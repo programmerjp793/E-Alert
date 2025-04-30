@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/verify"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/back_icon"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="160dp"
+        android:layout_height="130dp"
+        android:background="@drawable/ealert"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/tvVIIY"
+        android:layout_below="@id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:text="RECOVER PASSWORD"
+        android:textSize="25sp"
+        android:textColor="#FF5722"
+        android:fontFamily="@font/alexandria_extrabold"/>
+
+    <TextView
+        android:id="@+id/tvVIITDesc"
+        android:layout_below="@id/tvVIIY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="10dp"
+        android:text="Enter your registered email to reset your password"
+        android:textSize="15sp"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/alexandria_medium"/>
+
+    <TextView
+        android:id="@+id/tvEnterEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:text="ENTER YOUR EMAIL"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textStyle="italic"
+        android:fontFamily="@font/alexandria_medium"
+        android:layout_below="@id/tvVIITDesc"/>
+
+    <EditText
+        android:id="@+id/etEnterEmail"
+        android:inputType="textEmailAddress"
+        android:layout_below="@id/tvEnterEmail"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="50dp"
+        android:background="@drawable/edittext"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        android:fontFamily="@font/alexandria_medium"
+        android:hint="email@example.com"/>
+
+    <!-- Continue Button -->
+    <FrameLayout
+        android:id="@+id/setimgbtnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etEnterEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp">
+
+        <ImageButton
+            android:id="@+id/imgbtnContinue"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:contentDescription="Continue"
+            android:background="@drawable/button_orange"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:text="Continue"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:fontFamily="@font/alexandria_extrabold"/>
+    </FrameLayout>
+
+    <!-- Back to Login Link -->
+    <TextView
+        android:id="@+id/rememberedPass"
+        android:layout_below="@id/setimgbtnLogin"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:textStyle="italic"
+        android:textAlignment="center"
+        android:fontFamily="@font/alexandria_medium"
+        android:padding="5dp"
+        android:text="Remembered your password?"/>
+
+    <TextView
+        android:id="@+id/tvBackToLogin"
+        android:layout_below="@id/rememberedPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="#F48A82"
+        android:textStyle="italic"
+        android:fontFamily="@font/alexandria_extrabold"
+        android:padding="5dp"
+        android:text="Back to Login"/>
+</RelativeLayout>
